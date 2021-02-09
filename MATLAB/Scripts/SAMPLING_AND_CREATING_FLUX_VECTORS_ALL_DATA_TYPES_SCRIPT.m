@@ -47,26 +47,26 @@ save('sampled_media_models.mat');
 
 % For microarray data:
 load('sampled_microarray_models.mat');
-flux_E = FluxVectorize(modelENew,samplesE_32hours.points);
-flux_M = FluxVectorize(modelMNew,samplesM_32hours.points);
+flux_E = FluxVectorize(modelENew,samplesE_32hours);
+flux_M = FluxVectorize(modelMNew,samplesM_32hours);
 Escher('microarray_fluxes_DEC2020',modelENew,flux_M,flux_E)
 
 % For proteomic data:
 load('sampled_proteomic_models.mat');
-flux_E = FluxVectorize(modelENew,samplesE_32hours.points);
-flux_M = FluxVectorize(modelMNew,samplesM_32hours.points);
+flux_E = FluxVectorize(modelENew,samplesE_32hours);
+flux_M = FluxVectorize(modelMNew,samplesM_32hours);
 Escher('proteomic_fluxes_DEC2020',modelENew,flux_M,flux_E)
 
 % For RNAseq data:
 load('sampled_rnaseq_models.mat');
-flux_E = FluxVectorize(modelENew,samplesE_32hours.points);
-flux_M = FluxVectorize(modelMNew,samplesM_32hours.points);
+flux_E = FluxVectorize(modelENew,samplesE_32hours);
+flux_M = FluxVectorize(modelMNew,samplesM_32hours);
 Escher('rnaseq_fluxes_DEC2020',modelENew,flux_M,flux_E)
 
 % For media data:
 load('sampled_media_models.mat');
-flux_E = FluxVectorize(modelENew,samplesE_32hours.points);
-flux_M = FluxVectorize(modelMNew,samplesM_32hours.points);
+flux_E = FluxVectorize(modelENew,samplesE_32hours);
+flux_M = FluxVectorize(modelMNew,samplesM_32hours);
 Escher('media_fluxes_DEC2020',modelENew,flux_M,flux_E)
 
 
