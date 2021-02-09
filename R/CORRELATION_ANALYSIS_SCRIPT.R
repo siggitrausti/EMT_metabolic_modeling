@@ -113,7 +113,7 @@ chart.Correlation(df_fin[,-1], histogram=TRUE, pch=20,method = 'spearman')
 # Now do the correlation analysis for metabolic identifiers only:
 
 # Downloaded the metabolic gene list from REACTOME
-metabolic <- read.csv("result (2).csv",header=T, sep=",")
+metabolic <- read.csv("Reactome_pathway_identifiers_2018.csv",header=T, sep=",")
 subset <- metabolic[grep("^Metabolism$",metabolic$Pathway.name),]
 metabolic_genes = subset$Mapped.entities
 haha <- strsplit(as.character(metabolic_genes),";")
