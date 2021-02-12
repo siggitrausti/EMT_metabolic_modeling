@@ -78,12 +78,12 @@ for i=1:length(model.rxns)
     newub(i)=max(0,prctile(flux(flux>tol), (1 - downRegFrac)*100));
 end
 
-% Create the EPI and MES models
+% Create the bounds based on iBreast2886 random sampling
 modelNew = model;
 modelNew.lb=lower;
 modelNew.ub=upper;
 
-% Pre-allocate vectors for RNAseq analysis:
+% Pre-allocate vectors for proteomic analysis:
 lethal_rnaseq = num2cell(zeros(length(patient_vector),1));
 FBA_relax_bool = num2cell(zeros(length(patient_vector),1));
 FBA_flux = num2cell(zeros(length(patient_vector),1));
