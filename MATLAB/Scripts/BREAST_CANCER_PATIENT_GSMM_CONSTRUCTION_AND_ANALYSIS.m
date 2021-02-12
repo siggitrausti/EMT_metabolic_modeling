@@ -134,10 +134,10 @@ for q=1:length(patient_vector)
         FBAE = optimizeCbModel(modelENew);
         if FBAE.f < tol
             fprintf('*************************************************\n')
-            fprintf('Infeasible EPI model!\n')
+            fprintf('Infeasible model!\n')
         else
             fprintf('*************************************************\n')
-            fprintf('Feasible EPI model achieved!\n')
+            fprintf('Feasible model achieved!\n')
         end
 
         [grRatioE,~,~,~,hasEffectE] = singleGeneDeletion(modelENew,'FBA',modelENew.genes,'true');
@@ -151,10 +151,10 @@ for q=1:length(patient_vector)
         FBAE = optimizeCbModel(modelENew);
         if FBAE.f < tol
             fprintf('*************************************************\n')
-            fprintf('Infeasible EPI model!\n')
+            fprintf('Infeasible model!\n')
         else
             fprintf('*************************************************\n')
-            fprintf('Feasible EPI model achieved!\n')
+            fprintf('Feasible model achieved!\n')
         end
 
         [grRatioE,~,~,~,hasEffectE] = singleGeneDeletion(modelENew,'FBA',modelENew.genes,'false');
@@ -168,7 +168,7 @@ end
 
 save('GEA_of_all_patients_proteomic_TANG_PAPER_with_FBA.mat');
 %% 3) Analyse the data:
-% Read in data to split the patients into tumor vs nontumor:
+% Read in data to split the patients into ER-neg vs ER-pos:
 metadat = readtable('tang_proteomic_sample_info_JAN2021.txt','ReadVariableNames',false);
 metadat = table2cell(metadat);
 
